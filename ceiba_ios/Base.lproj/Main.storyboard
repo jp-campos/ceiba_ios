@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ceiba_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCc-zo-sPs">
+                                <rect key="frame" x="20" y="107" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="PB7-w6-VUo"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoo-mF-U3W">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prueba de Ingreso " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeA-qd-rKI">
+                                        <rect key="frame" x="20" y="46" width="198.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.36862745098039218" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="8dH-GH-Pa5"/>
+                                    <constraint firstItem="FeA-qd-rKI" firstAttribute="leading" secondItem="qoo-mF-U3W" secondAttribute="leading" constant="20" id="cFy-tk-4ul"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FeA-qd-rKI" secondAttribute="trailing" constant="20" symbolic="YES" id="qKe-gP-D9d"/>
+                                    <constraint firstAttribute="bottom" secondItem="FeA-qd-rKI" secondAttribute="bottom" constant="12" id="w0F-ck-ZvP"/>
+                                    <constraint firstAttribute="height" constant="93" id="zsn-tz-Rnq"/>
+                                    <constraint firstItem="FeA-qd-rKI" firstAttribute="top" secondItem="qoo-mF-U3W" secondAttribute="top" constant="46" id="zzn-rL-y64"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdK-E2-WQG">
+                                <rect key="frame" x="20" y="184" width="374" height="712"/>
+                                <color key="backgroundColor" red="0.96074670549999996" green="0.96084660290000001" blue="0.95686227079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="166" id="c5G-bp-nCI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qoo-mF-U3W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CA7-am-Pry"/>
+                            <constraint firstItem="bCc-zo-sPs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EK7-Ut-6WV"/>
+                            <constraint firstItem="qoo-mF-U3W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ITR-EL-4my"/>
+                            <constraint firstItem="HdK-E2-WQG" firstAttribute="top" secondItem="bCc-zo-sPs" secondAttribute="bottom" constant="43" id="Wga-mt-THL"/>
+                            <constraint firstAttribute="bottom" secondItem="HdK-E2-WQG" secondAttribute="bottom" id="ZdV-mc-bLP"/>
+                            <constraint firstItem="bCc-zo-sPs" firstAttribute="top" secondItem="qoo-mF-U3W" secondAttribute="bottom" constant="14" id="e06-p7-Jje"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCc-zo-sPs" secondAttribute="trailing" constant="20" id="smy-ah-S0G"/>
+                            <constraint firstItem="HdK-E2-WQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t9E-OK-uTf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HdK-E2-WQG" secondAttribute="trailing" constant="20" id="wHv-T3-8V9"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DwA-MV-tDw"/>
+                    <connections>
+                        <outlet property="cardsContainer" destination="HdK-E2-WQG" id="Bvt-He-ZU5"/>
+                        <outlet property="searchBar" destination="bCc-zo-sPs" id="Ivx-fA-F7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="67.633928571428569"/>
         </scene>
     </scenes>
 </document>

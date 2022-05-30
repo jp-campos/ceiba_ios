@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCard" customModule="ceiba_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="mailLabel" destination="3uQ-WB-62D" id="96v-oi-One"/>
+                <outlet property="nameLabel" destination="qeG-Z1-Mt3" id="6sX-EA-XIM"/>
+                <outlet property="phoneLabel" destination="Ryg-9o-CDE" id="OJ3-Iv-emF"/>
+                <outlet property="postsBtn" destination="Djh-sn-CqD" id="c1J-mR-hTo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5hu-HU-djL">
+                    <rect key="frame" x="10" y="0.0" width="71.5" height="78.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-Z1-Mt3" userLabel="nameLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                            <color key="textColor" red="0.15686274510000001" green="0.36862745099999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BbL-CI-Sv1">
+                            <rect key="frame" x="0.0" y="23" width="67" height="32.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tKp-cQ-GMF">
+                                    <rect key="frame" x="0.0" y="14" width="19.5" height="17.5"/>
+                                    <color key="tintColor" red="0.15686274510000001" green="0.36862745099999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryg-9o-CDE" userLabel="phoneLabel">
+                                    <rect key="frame" x="29.5" y="14" width="37.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8iw-nO-7wA">
+                            <rect key="frame" x="0.0" y="58.5" width="71.5" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mail.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jbD-U1-8Ff">
+                                    <rect key="frame" x="0.0" y="1" width="24" height="17.5"/>
+                                    <color key="tintColor" red="0.15686274510000001" green="0.36862745099999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uQ-WB-62D" userLabel="mailLabel">
+                                    <rect key="frame" x="34" y="1.5" width="37.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="jbD-U1-8Ff" secondAttribute="bottom" id="0sL-tU-cWC"/>
+                                <constraint firstItem="jbD-U1-8Ff" firstAttribute="baseline" secondItem="3uQ-WB-62D" secondAttribute="firstBaseline" id="2g1-rr-Dcb"/>
+                                <constraint firstItem="jbD-U1-8Ff" firstAttribute="top" secondItem="8iw-nO-7wA" secondAttribute="top" id="Yg4-aW-CC5"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BbL-CI-Sv1" firstAttribute="centerY" secondItem="5hu-HU-djL" secondAttribute="centerY" id="3KH-Nj-CWB"/>
+                        <constraint firstItem="BbL-CI-Sv1" firstAttribute="top" secondItem="qeG-Z1-Mt3" secondAttribute="bottom" constant="3" id="xSH-J0-BGn"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djh-sn-CqD">
+                    <rect key="frame" x="100" y="112" width="162" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="oRB-b5-wrS"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="rQe-Zv-X0m"/>
+                        <constraint firstAttribute="width" constant="162" id="swY-M9-hih"/>
+                    </constraints>
+                    <color key="tintColor" red="0.15686274510000001" green="0.36862745099999999" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="VER PUBLICACIONES">
+                        <fontDescription key="titleFontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Djh-sn-CqD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="4j2-pa-eT3"/>
+                <constraint firstAttribute="height" constant="151" id="Cxe-1q-li9"/>
+                <constraint firstItem="5hu-HU-djL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="I2X-cV-4MA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5hu-HU-djL" secondAttribute="bottom" constant="72.5" id="KLO-8s-cXD"/>
+                <constraint firstAttribute="width" constant="317" id="SbN-pD-Ijt"/>
+                <constraint firstAttribute="bottom" secondItem="Djh-sn-CqD" secondAttribute="bottom" constant="10" id="TdF-VG-xZW"/>
+                <constraint firstItem="5hu-HU-djL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="pJO-fK-VWz"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-560.14492753623188" y="-109.48660714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mail.fill" catalog="system" width="128" height="93"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>

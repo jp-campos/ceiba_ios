@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5343B322843F6BA004EBED8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5343B312843F6BA004EBED8 /* User.swift */; };
+		D5343B352844049E004EBED8 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5343B342844049E004EBED8 /* UserApi.swift */; };
+		D5343B37284404CB004EBED8 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5343B36284404CB004EBED8 /* BaseClient.swift */; };
+		D5343B3928440E27004EBED8 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5343B3828440E27004EBED8 /* UserMapper.swift */; };
+		D579E69B28425D6B007A712C /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579E69928425D6B007A712C /* UserCard.swift */; };
+		D579E69C28425D6B007A712C /* UserCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D579E69A28425D6B007A712C /* UserCard.xib */; };
+		D579E6A2284282C4007A712C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579E6A1284282C4007A712C /* HomeViewController.swift */; };
 		D5BFEA4C2841AB2F00B5BD92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEA4B2841AB2F00B5BD92 /* AppDelegate.swift */; };
 		D5BFEA4E2841AB2F00B5BD92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEA4D2841AB2F00B5BD92 /* SceneDelegate.swift */; };
-		D5BFEA502841AB2F00B5BD92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEA4F2841AB2F00B5BD92 /* ViewController.swift */; };
 		D5BFEA532841AB2F00B5BD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BFEA512841AB2F00B5BD92 /* Main.storyboard */; };
 		D5BFEA562841AB2F00B5BD92 /* ceiba_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5BFEA542841AB2F00B5BD92 /* ceiba_ios.xcdatamodeld */; };
 		D5BFEA582841AB3A00B5BD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BFEA572841AB3A00B5BD92 /* Assets.xcassets */; };
@@ -37,10 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D5343B312843F6BA004EBED8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D5343B342844049E004EBED8 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		D5343B36284404CB004EBED8 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		D5343B3828440E27004EBED8 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
+		D579E69928425D6B007A712C /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		D579E69A28425D6B007A712C /* UserCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCard.xib; sourceTree = "<group>"; };
+		D579E6A1284282C4007A712C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D5BFEA482841AB2F00B5BD92 /* ceiba_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ceiba_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BFEA4B2841AB2F00B5BD92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BFEA4D2841AB2F00B5BD92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5BFEA4F2841AB2F00B5BD92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5BFEA522841AB2F00B5BD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5BFEA552841AB2F00B5BD92 /* ceiba_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ceiba_ios.xcdatamodel; sourceTree = "<group>"; };
 		D5BFEA572841AB3A00B5BD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5343B302843F6A1004EBED8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D5343B312843F6BA004EBED8 /* User.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D5343B3328440457004EBED8 /* Infraestructure */ = {
+			isa = PBXGroup;
+			children = (
+				D5343B342844049E004EBED8 /* UserApi.swift */,
+				D5343B36284404CB004EBED8 /* BaseClient.swift */,
+				D5343B3828440E27004EBED8 /* UserMapper.swift */,
+			);
+			path = Infraestructure;
+			sourceTree = "<group>";
+		};
+		D579E69E284268AD007A712C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D579E69928425D6B007A712C /* UserCard.swift */,
+				D579E69A28425D6B007A712C /* UserCard.xib */,
+				D579E6A1284282C4007A712C /* HomeViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D5BFEA3F2841AB2F00B5BD92 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +141,12 @@
 		D5BFEA4A2841AB2F00B5BD92 /* ceiba_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D5343B3328440457004EBED8 /* Infraestructure */,
+				D5343B302843F6A1004EBED8 /* Domain */,
+				D579E69E284268AD007A712C /* Components */,
 				D5BFEA4B2841AB2F00B5BD92 /* AppDelegate.swift */,
-				D5BFEA4D2841AB2F00B5BD92 /* SceneDelegate.swift */,
-				D5BFEA4F2841AB2F00B5BD92 /* ViewController.swift */,
 				D5BFEA512841AB2F00B5BD92 /* Main.storyboard */,
+				D5BFEA4D2841AB2F00B5BD92 /* SceneDelegate.swift */,
 				D5BFEA572841AB3A00B5BD92 /* Assets.xcassets */,
 				D5BFEA592841AB3A00B5BD92 /* LaunchScreen.storyboard */,
 				D5BFEA5C2841AB3A00B5BD92 /* Info.plist */,
@@ -236,6 +278,7 @@
 			files = (
 				D5BFEA5B2841AB3A00B5BD92 /* LaunchScreen.storyboard in Resources */,
 				D5BFEA582841AB3A00B5BD92 /* Assets.xcassets in Resources */,
+				D579E69C28425D6B007A712C /* UserCard.xib in Resources */,
 				D5BFEA532841AB2F00B5BD92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5343B3928440E27004EBED8 /* UserMapper.swift in Sources */,
 				D5BFEA562841AB2F00B5BD92 /* ceiba_ios.xcdatamodeld in Sources */,
-				D5BFEA502841AB2F00B5BD92 /* ViewController.swift in Sources */,
 				D5BFEA4C2841AB2F00B5BD92 /* AppDelegate.swift in Sources */,
+				D5343B322843F6BA004EBED8 /* User.swift in Sources */,
+				D579E69B28425D6B007A712C /* UserCard.swift in Sources */,
 				D5BFEA4E2841AB2F00B5BD92 /* SceneDelegate.swift in Sources */,
+				D5343B37284404CB004EBED8 /* BaseClient.swift in Sources */,
+				D5343B352844049E004EBED8 /* UserApi.swift in Sources */,
+				D579E6A2284282C4007A712C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
